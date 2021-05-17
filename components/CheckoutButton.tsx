@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core';
 import { useShoppingCart } from 'use-shopping-cart';
 
-const Checkout = () => {
+const CheckoutButton = () => {
   const { redirectToCheckout } = useShoppingCart();
 
   return (
@@ -10,9 +10,9 @@ const Checkout = () => {
       color="primary"
       onClick={() => redirectToCheckout()}
     >
-      Checkout
+      Pay now
     </Button>
   );
 };
 
-export default Checkout;
+export default CheckoutButton;
