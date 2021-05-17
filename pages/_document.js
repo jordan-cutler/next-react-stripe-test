@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../utils/theme';
 
+// Grabbed from material ui / next-js integration example: https://github.com/mui-org/material-ui/tree/master/examples/nextjs
 export default class MyDocument extends Document {
   render() {
     return (

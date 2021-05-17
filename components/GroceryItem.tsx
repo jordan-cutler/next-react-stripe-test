@@ -10,8 +10,6 @@ type Props = {
 const GroceryItem = ({ item }: Props) => {
   const { addItem } = useShoppingCart();
 
-  // console.log({ cartDetails });
-
   return (
     <Paper elevation={5}>
       <Typography variant="h3">{item.name}</Typography>

@@ -3,12 +3,9 @@ import Layout from '../components/Layout';
 import { TextField, Typography } from '@material-ui/core';
 import { APPLICATION_TITLE } from '../constants/app-metadata';
 import CheckoutButton from '../components/CheckoutButton';
-// import { useShoppingCart } from 'use-shopping-cart';
 import { Form, Formik } from 'formik';
 
 const Checkout = () => {
-  // const { cartDetails } = useShoppingCart();
-
   const onSubmit = () => {
     return null;
   };
@@ -41,12 +38,5 @@ const Checkout = () => {
     </Layout>
   );
 };
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const cartItems: GroceryItem[] = sampleGroceryData;
-//   const database = await connectToDatabase();
-//
-//   return { props: { items } };
-// };
 
 export default Checkout;

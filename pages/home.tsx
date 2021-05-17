@@ -39,10 +39,4 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { items } };
 };
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const items: GroceryItem[] = sampleGroceryData;
-//   const database = await connectToDatabase();
-//   return { props: { items } };
-// };
-
 export default HomePage;

@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { sampleGroceryData } from '../../../utils/sample-data';
 import { validateCartItems } from 'use-shopping-cart/src/serverUtil';
 import Stripe from 'stripe';
+import { DOMAIN_URL } from '../../../constants/app-metadata';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_API_KEY, {
   apiVersion: '2020-08-27',
@@ -17,8 +18,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         line_items,
         submit_type: 'pay',
         mode: 'payment',
-        success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${req.headers.origin}/home`,
+        success_url: `${DOMAIN_URL}/confirmation`,
+        cancel_url: `${DOMAIN_URL}/home`,
       });
 
       res.status(200).json(session);
